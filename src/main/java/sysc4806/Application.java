@@ -7,7 +7,6 @@ import sysc4806.Controller.BuddyInfoController;
 
 
 @SpringBootApplication
-@ComponentScan(basePackageClasses = BuddyInfoController.class)
 public class Application {
 
     public static void main(String[] args)
