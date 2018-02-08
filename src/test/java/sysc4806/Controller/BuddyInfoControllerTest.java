@@ -23,20 +23,16 @@ import org.springframework.test.web.servlet.MockMvc;
 import sysc4806.BuddyInfoRepository;
 import sysc4806.Model.BuddyInfo;
 
-
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
 public class BuddyInfoControllerTest {
-
 
     @Autowired
     private MockMvc mockMvc;
 
     @Autowired
     private BuddyInfoRepository buddyInfoRepository;
-
 
     private String baseURL = "/buddyInfo";
 

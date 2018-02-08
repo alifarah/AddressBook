@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import sysc4806.Controller.BuddyInfoController;
 
-
 @SpringBootApplication
 public class Application {
 
