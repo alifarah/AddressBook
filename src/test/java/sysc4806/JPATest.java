@@ -17,6 +17,8 @@ public class JPATest {
 
     private String name = "buddy";
     private String phoneNumber = "123-4567";
+    private String address = "main";
+
 
     @Autowired
     private AddressBookRepository addressBookRepository;
@@ -45,6 +47,6 @@ public class JPATest {
 
     private BuddyInfo createBuddyInfo()
     {
-        return new BuddyInfo(name,phoneNumber);
+        return new BuddyInfo(name,phoneNumber, address);
     }
 }

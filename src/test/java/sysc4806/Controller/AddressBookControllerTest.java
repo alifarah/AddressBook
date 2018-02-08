@@ -53,6 +53,7 @@ public class AddressBookControllerTest {
 
     private static String name = "ali";
     private static String phone = "123-1234";
+    private static String address = "main 123";
 
 
     @Test
@@ -69,7 +70,7 @@ public class AddressBookControllerTest {
     public void addBuddyToAddressBookTest() throws Exception
     {
         AddressBook addressBook = new AddressBook();
-        BuddyInfo buddyInfo = buddyInfoRepository.save(new BuddyInfo(name,phone));
+        BuddyInfo buddyInfo = buddyInfoRepository.save(new BuddyInfo(name,phone,address));
         AddressBook createdAddressBook =  addressBookRepository.save(new AddressBook());
         addressBook.addBuddyInfo(buddyInfo);
 
@@ -83,7 +84,7 @@ public class AddressBookControllerTest {
     public void removeBuddyToAddressBookTest() throws Exception
     {
         AddressBook addressBook = new AddressBook();
-        BuddyInfo buddyInfo = buddyInfoRepository.save(new BuddyInfo(name,phone));
+        BuddyInfo buddyInfo = buddyInfoRepository.save(new BuddyInfo(name,phone,address));
         addressBook.addBuddyInfo(buddyInfo);
         AddressBook createdAddressBook =  addressBookRepository.save(new AddressBook());
 

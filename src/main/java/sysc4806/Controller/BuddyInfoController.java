@@ -16,9 +16,11 @@ public class BuddyInfoController {
     private BuddyInfoRepository buddyInfoRepository;
 
     @PostMapping
-    public BuddyInfo createBuddyInfo(@RequestParam(value = "name", defaultValue = "ali") String name, @RequestParam(value = "phone", defaultValue = "123") String phone)
+    public BuddyInfo createBuddyInfo(@RequestParam(value = "name", defaultValue = "ali") String name,
+                                     @RequestParam(value = "phone", defaultValue = "123") String phone,
+                                     @RequestParam(value = "address", defaultValue = "123") String address)
     {
-        BuddyInfo buddyInfo = new BuddyInfo(name,phone);
+        BuddyInfo buddyInfo = new BuddyInfo(name,phone,address);
         return buddyInfoRepository.save(buddyInfo);
     }
 

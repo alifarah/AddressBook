@@ -7,6 +7,7 @@ public class BuddyInfoTest {
 
     private String name = "buddy";
     private String phoneNumber = "123-4567";
+    private String address = "main 123";
     private long id = 1;
 
     @org.junit.Test
@@ -56,6 +57,6 @@ public class BuddyInfoTest {
 
     private BuddyInfo createBuddyInfo()
     {
-        return new BuddyInfo(name, phoneNumber);
+        return new BuddyInfo(name, phoneNumber,address);
     }
 }

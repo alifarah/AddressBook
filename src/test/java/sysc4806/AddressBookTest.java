@@ -8,7 +8,8 @@ import static org.junit.Assert.*;
 
 public class AddressBookTest {
 
-    private BuddyInfo buddyInfo = new BuddyInfo("buddy","123-4567");
+    private BuddyInfo buddyInfo = new BuddyInfo("buddy","123-4567", "main123");
+
 
     @Test
     public void getBuddyInfos() {
@@ -18,7 +19,7 @@ public class AddressBookTest {
 
     @Test
     public void addBuddyInfo() {
-        BuddyInfo buddyInfo2 = new BuddyInfo("abd", "123-1234");
+        BuddyInfo buddyInfo2 = new BuddyInfo("abd", "123-1234", "main 321");
         AddressBook addressBook = createAddressBook();
         assertTrue(addressBook.addBuddyInfo(buddyInfo2));
         assertTrue(addressBook.getBuddyInfos().contains(buddyInfo2));

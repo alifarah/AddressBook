@@ -42,6 +42,8 @@ public class BuddyInfoControllerTest {
 
     private static String name = "ali";
     private static String phone = "123-1234";
+    private static String address = "main 123";
+
 
     @Test
     public void createBuddyTest() throws Exception
@@ -57,7 +59,7 @@ public class BuddyInfoControllerTest {
     @Test
     public void getBuddyTest() throws Exception
     {
-        BuddyInfo buddyInfo = new BuddyInfo(name,phone);
+        BuddyInfo buddyInfo = new BuddyInfo(name,phone,address);
         BuddyInfo createdBuddy = buddyInfoRepository.save(buddyInfo);
         String url = this.baseURL + "/" + createdBuddy.getId();
         this.mockMvc.perform(get(url).

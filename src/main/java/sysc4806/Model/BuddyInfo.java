@@ -15,15 +15,17 @@ public class BuddyInfo {
 
     private String name;
     private String phoneNumber;
+    private String address;
 
     public BuddyInfo()
     {
 
     }
 
-    public BuddyInfo(String name, String phoneNumber)
+    public BuddyInfo(String name, String phoneNumber, String address)
     {
         this.name = name;
+        this.address = address;
         this.phoneNumber = phoneNumber;
     }
 
